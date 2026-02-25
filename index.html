@@ -53,12 +53,21 @@
       z-index: 100;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      justify-content: center;
+      padding: 0 1.5rem;
       height: 64px;
       background: rgba(255,255,255,0.92);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     .nav-brand {
@@ -732,12 +741,14 @@
 
   <!-- ─── NAV ─────────────────────────────────── -->
   <nav>
-    <a class="nav-brand" href="#top">Soheil&nbsp;Kianzad</a>
-    <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <div class="nav-inner">
+      <a class="nav-brand" href="#top">Soheil&nbsp;Kianzad</a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <!-- ─── HERO ─────────────────────────────────── -->
@@ -745,8 +756,7 @@
     <p class="hero-eyebrow">Ph.D. · HCI · Applied ML · Product</p>
     <h1>Building the<br>interface between<br><span class="highlight">humans and machines.</span></h1>
     <p class="hero-subtitle">
-      I'm Soheil Kianzad. I ship product and design across domains: production input systems on foldable PCs at Huawei,
-      civic legal tech at CourtReady, and haptic learning robots at SensciLab. Research, engineering, and end-to-end delivery — from concept to shipped experience.
+      I ship product and design across hardware, civic tech, and embodied AI — Huawei (MateBook Fold input), CourtReady (legal tools & Academy), SensciLab (MagicPen). From research to shipped experience.
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-layer-group"></i> See selected work</a>
@@ -759,7 +769,6 @@
     <div class="section-inner">
       <div class="section-header">
         <div>
-          <p class="section-eyebrow">Selected Work</p>
           <h2 class="section-title">Projects</h2>
         </div>
       </div>
@@ -769,7 +778,6 @@
       <!-- PROJECT 1 — Featured -->
       <div class="project-card featured">
         <div class="card-visual">
-          <span class="featured-badge"><i class="fa-solid fa-star"></i> Production</span>
           <video
             class="project-video"
             autoplay
@@ -862,7 +870,6 @@
       <!-- PROJECT 3 -->
       <div class="project-card featured">
         <div class="card-visual">
-          <span class="featured-badge"><i class="fa-solid fa-file-lines"></i> 5 Publications</span>
           <img
             src="Gallery/PenWitgIpadLQ.jpg"
             alt="MagicPen haptic robot with iPad"
@@ -889,9 +896,8 @@
             university-level ML/AI development.
           </p>
 
-          <!-- Publications -->
           <div class="pub-list">
-            <p class="pub-list-label"><i class="fa-solid fa-file-lines"></i> Publications</p>
+            <p class="pub-list-label">Publications</p>
 
             <a class="pub-item" href="https://dl.acm.org/doi/full/10.1145/3706599.3720173" target="_blank">
               <div class="pub-venue">CHI 2025 · Extended Abstracts</div>
@@ -960,14 +966,7 @@
         <p class="section-eyebrow">About</p>
         <h2 class="section-title" style="margin-bottom:1.75rem">Product, design, and research<br>across many fields.</h2>
         <p>
-          I deliver <strong>product and design</strong> in consumer hardware, civic tech, and embodied AI — not just in one lane.
-          At Huawei I led input systems for the MateBook Fold; at CourtReady I co-built legal tools and Academy courses for Canadians;
-          at SensciLab I founded and drove R&amp;D for the MagicPen haptic learning robot from research to patent and conferences.
-        </p>
-        <p>
-          My work sits at the intersection of <strong>HCI</strong>, <strong>applied ML</strong>, and <strong>product</strong>:
-          Gaussian and language models for typing, RAG and embeddings for legal guidance, force feedback and multimodal interaction for learning.
-          I'm comfortable taking a problem from idea to shipped experience, with measurable outcomes and systems that hold up in the real world.
+          I work at the intersection of <strong>HCI</strong>, <strong>applied ML</strong>, and <strong>product</strong>: input models and language models for typing, RAG and embeddings for legal guidance, force feedback and multimodal interaction for learning. From idea to shipped experience, with measurable outcomes.
         </p>
         <div class="skills-list">
           <span class="skill-chip">Python</span>
