@@ -169,33 +169,7 @@
       transform: translateY(-2px);
     }
 
-    .hero-stats {
-      display: flex;
-      gap: 3rem;
-      margin-top: 4rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--border);
-      flex-wrap: wrap;
-    }
-
-    .stat-item { text-align: left; }
-
-    .stat-number {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--text);
-      letter-spacing: -0.03em;
-    }
-
-    .stat-number span { color: var(--accent2); }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-top: 0.25rem;
-    }
+    /* previously hero stats strip – removed per design preference */
 
     /* ─── SECTION ─────────────────────────────── */
     section {
@@ -686,7 +660,6 @@
 
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.4rem; }
-      .hero-stats { gap: 1.5rem; }
       .contact-box { padding: 2rem 1.5rem; }
     }
   </style>
@@ -714,20 +687,6 @@
     <div class="hero-cta">
       <a class="btn btn-primary" href="#projects"><i class="fa-solid fa-layer-group"></i> View Projects</a>
       <a class="btn btn-outline" href="#contact"><i class="fa-regular fa-envelope"></i> Get in Touch</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-number">98<span>%</span></div>
-        <div class="stat-label">Selection Accuracy</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">4<span>+</span></div>
-        <div class="stat-label">Shipped Projects</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">3<span>+</span></div>
-        <div class="stat-label">Domains: HCI · ML · LLM</div>
-      </div>
     </div>
   </div>
 
@@ -782,33 +741,6 @@
         </div>
         <div class="card-visual">
           <span class="featured-badge"><i class="fa-solid fa-star"></i> Production</span>
-
-          <!-- Huawei MateBook Fold page preview -->
-          <a
-            href="https://consumer.huawei.com/cn/harmonyos-computer/matebook-fold-ultimate-design/"
-            target="_blank"
-            class="site-preview-link"
-          >
-            <img
-              src="https://image.thum.io/get/width/500/crop/260/noanimate/https://consumer.huawei.com/cn/harmonyos-computer/matebook-fold-ultimate-design/"
-              alt="HUAWEI MateBook Fold 非凡大师 product page"
-              class="site-preview-img"
-              onerror="this.parentElement.classList.add('preview-fallback')"
-            >
-            <div class="site-preview-label">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              HUAWEI MateBook Fold 非凡大师
-            </div>
-          </a>
-
-          <div class="stat-pill">
-            <div class="num">98%</div>
-            <div class="lbl">Selection Accuracy</div>
-          </div>
-          <div class="stat-pill">
-            <div class="num">70</div>
-            <div class="lbl">Net Satisfaction Score</div>
-          </div>
         </div>
       </div>
 
@@ -843,19 +775,6 @@
             <span class="meta-value">Legal self-advocacy · Ontario courts · Flight rights</span>
           </div>
         </div>
-        <!-- CourtReady site preview -->
-        <a href="https://courtready.ca" target="_blank" class="site-preview-link" style="margin-top:1rem;">
-          <img
-            src="https://image.thum.io/get/width/400/crop/260/noanimate/https://courtready.ca/"
-            alt="CourtReady.ca website preview"
-            class="site-preview-img"
-            onerror="this.parentElement.classList.add('preview-fallback')"
-          >
-          <div class="site-preview-label">
-            <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            courtready.ca · Tools & Academy
-          </div>
-        </a>
         <a class="card-link" href="https://courtready.ca" target="_blank">Visit CourtReady.ca <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
@@ -923,29 +842,6 @@
         <!-- Visual sidebar -->
         <div class="card-visual">
           <span class="featured-badge"><i class="fa-solid fa-star"></i> 2 Publications</span>
-
-          <!-- SensciLab site preview -->
-          <a href="https://senscilab.com" target="_blank" class="site-preview-link">
-            <img
-              src="https://image.thum.io/get/width/400/crop/260/noanimate/https://senscilab.com/mainpage/mainpage"
-              alt="SensciLab website preview"
-              class="site-preview-img"
-              onerror="this.parentElement.classList.add('preview-fallback')"
-            >
-            <div class="site-preview-label">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              senscilab.com
-            </div>
-          </a>
-
-          <div class="stat-pill">
-            <div class="num">n=16</div>
-            <div class="lbl">CHI 2025 User Study</div>
-          </div>
-          <div class="stat-pill">
-            <div class="num">2.5D</div>
-            <div class="lbl">Force Feedback</div>
-          </div>
         </div>
       </div>
 
