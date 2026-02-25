@@ -337,6 +337,43 @@
       flex: 1;
     }
 
+    .academy-block {
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .academy-tagline {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+
+    .academy-tagline-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .academy-courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .academy-course {
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 0.4rem 0.6rem;
+      background: var(--surface2);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .academy-course strong { color: var(--text); font-weight: 500; }
+    .academy-course .coming-soon { font-size: 0.7rem; color: var(--accent); font-weight: 600; }
+
     .card-meta {
       display: flex;
       flex-direction: column;
@@ -806,6 +843,20 @@
           Built chunking + embedding pipelines and improved retrieval accuracy using hybrid HyDE strategies so
           non-lawyers can answer \"what do I do next?\" in plain language.
         </p>
+
+        <div class="academy-block">
+          <p class="academy-tagline">Lowering the drawbridge to legal knowledge.</p>
+          <p class="academy-tagline-sub">Understand Ontario's courts in your language.</p>
+          <div class="academy-courses">
+            <span class="academy-course"><strong>Small Claims Court</strong> (EN)</span>
+            <span class="academy-course"><strong>Cour des petites créances</strong> (FR)</span>
+            <span class="academy-course"><strong>Flight Delay Protections</strong> (Nimbus · Free)</span>
+            <span class="academy-course"><strong>Filing a Flight Delay Claim at the CTA</strong> (Casey)</span>
+            <span class="academy-course"><strong>Ontario Consumer Rights</strong> (Nimbus · Free)</span>
+            <span class="academy-course"><strong>Landlord &amp; Tenant Board</strong> <span class="coming-soon">Coming soon</span></span>
+          </div>
+        </div>
+
         <div class="card-meta">
           <div class="meta-row">
             <span class="meta-label">Type</span>
