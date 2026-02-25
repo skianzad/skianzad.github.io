@@ -337,42 +337,36 @@
       flex: 1;
     }
 
-    .academy-block {
-      margin-top: 1.25rem;
-      padding-top: 1.25rem;
-      border-top: 1px solid var(--border);
-    }
-
-    .academy-tagline {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--text);
-      margin-bottom: 0.35rem;
-    }
-
-    .academy-tagline-sub {
-      font-size: 0.8rem;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .academy-courses {
+    .courtready-visuals {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: 1fr 1fr;
       gap: 0.5rem;
+      margin: -2rem -2rem 1.25rem -2rem;
+      padding: 0;
+      border-radius: var(--radius) var(--radius) 0 0;
+      overflow: hidden;
     }
 
-    .academy-course {
-      font-size: 0.78rem;
-      color: var(--muted);
-      padding: 0.4rem 0.6rem;
-      background: var(--surface2);
-      border-radius: 8px;
-      border: 1px solid var(--border);
+    .courtready-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 0;
+      border: none;
+      object-fit: cover;
+      object-position: top;
+      max-height: 260px;
     }
 
-    .academy-course strong { color: var(--text); font-weight: 500; }
-    .academy-course .coming-soon { font-size: 0.7rem; color: var(--accent); font-weight: 600; }
+    .courtready-visuals .courtready-img:first-child { border-radius: var(--radius) 0 0 0; }
+    .courtready-visuals .courtready-img:last-child { border-radius: 0 var(--radius) 0 0; }
+    .courtready-visuals .courtready-img:only-child { border-radius: var(--radius) var(--radius) 0 0; }
+
+    @media (max-width: 640px) {
+      .courtready-visuals { grid-template-columns: 1fr; margin: -2rem -2rem 1rem -2rem; }
+      .courtready-img { max-height: 220px; border-radius: 0 !important; }
+      .courtready-visuals .courtready-img:first-child { border-radius: var(--radius) var(--radius) 0 0 !important; }
+    }
 
     .card-meta {
       display: flex;
@@ -828,6 +822,10 @@
 
       <!-- PROJECT 2 -->
       <div class="project-card">
+        <div class="courtready-visuals">
+          <img src="court_ready.png" alt="CourtReady Academy — course grid" class="courtready-img">
+          <img src="court_ready1.png" alt="CourtReady Academy — Small Claims Court course" class="courtready-img">
+        </div>
         <p class="card-index">02 / 03</p>
         <div class="card-tags">
           <span class="tag">LLMs</span>
@@ -843,19 +841,6 @@
           Built chunking + embedding pipelines and improved retrieval accuracy using hybrid HyDE strategies so
           non-lawyers can answer \"what do I do next?\" in plain language.
         </p>
-
-        <div class="academy-block">
-          <p class="academy-tagline">Lowering the drawbridge to legal knowledge.</p>
-          <p class="academy-tagline-sub">Understand Ontario's courts in your language.</p>
-          <div class="academy-courses">
-            <span class="academy-course"><strong>Small Claims Court</strong> (EN)</span>
-            <span class="academy-course"><strong>Cour des petites créances</strong> (FR)</span>
-            <span class="academy-course"><strong>Flight Delay Protections</strong> (Nimbus · Free)</span>
-            <span class="academy-course"><strong>Filing a Flight Delay Claim at the CTA</strong> (Casey)</span>
-            <span class="academy-course"><strong>Ontario Consumer Rights</strong> (Nimbus · Free)</span>
-            <span class="academy-course"><strong>Landlord &amp; Tenant Board</strong> <span class="coming-soon">Coming soon</span></span>
-          </div>
-        </div>
 
         <div class="card-meta">
           <div class="meta-row">
