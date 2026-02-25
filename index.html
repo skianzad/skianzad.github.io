@@ -642,6 +642,13 @@
       background: var(--surface2);
     }
 
+    .project-video {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 12px 30px rgba(15,23,42,0.16);
+      background: #000;
+    }
+
     /* ─── RESPONSIVE ──────────────────────────── */
     @media (max-width: 900px) {
       .project-card.featured {
@@ -716,12 +723,12 @@
             Led research, design, and system validation of Huawei's first production <strong style="color:var(--text)">virtual keyboard + trackpad</strong>
             for the <strong style="color:var(--text)">MateBook Fold 非凡大师 (Ultimate Design)</strong>, an 18&quot; HarmonyOS foldable PC that can switch between
             a full-screen canvas and a laptop mode with on-display keyboard and trackpad.<br><br>
-            Shipped the foldable virtual keyboard that users can summon with an eight‑finger tap in fold mode, with
-            adjustable key pitch/layout, multiple skins, and a built‑in linear motor to create realistic typing feel — launched
-            as the <strong style="color:var(--text)">#1 user-selected feature</strong> with a Net Satisfaction Score (NSS) of 70.<br><br>
-            Researched and developed advanced sensing for foldable PC input: Gaussian touch‑offset models plus language models
-            that increased typing speed by ~20%, multimodal state machines that reached <strong style="color:var(--text)">98% selection accuracy</strong>,
-            and deep learning models that detect accidental touches and palm contacts to keep input stable on the large, flexible surface.
+            When folded, a light touch of eight fingers brings up the virtual keyboard so you can type ideas at any time.
+            Multiple skins are available, and key spacing and layout are adjustable for a personalized yet efficient typing
+            experience; the built-in linear motor provides a natural and realistic typing feel.<br><br>
+            Under the hood, I developed the sensing and modeling stack for this experience: Gaussian touch‑offset models plus
+            language models to speed up blind typing on the flexible surface, multimodal state machines to keep pointing
+            precise, and deep learning models that suppress accidental touches and palm contacts.
           </p>
           <div class="card-meta">
             <div class="meta-row">
@@ -741,6 +748,14 @@
         </div>
         <div class="card-visual">
           <span class="featured-badge"><i class="fa-solid fa-star"></i> Production</span>
+          <video
+            src="Gallery/huawei-matebook-fold-ultimate-design-virtual-keyboard.mp4"
+            class="project-video"
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
         </div>
       </div>
 
