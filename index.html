@@ -393,10 +393,14 @@
     /* Sensci Cricket: one image at a time, cycling teaser (height matches CourtReady card) */
     .cricket-teaser {
       position: relative;
-      margin: -2rem -2rem 1.25rem -2rem;
+      margin-top: -2rem;
+      margin-right: -2rem;
+      margin-bottom: 1.25rem;
+      margin-left: -2rem;
       border-radius: var(--radius) var(--radius) 0 0;
       overflow: hidden;
-      width: 100%;
+      width: calc(100% + 4rem);
+      max-width: calc(100% + 4rem);
       height: 360px !important;
       min-height: 360px;
       max-height: 360px;
@@ -434,7 +438,7 @@
       77%, 100% { opacity: 1; }
     }
     @media (max-width: 640px) {
-      .cricket-teaser { margin: -2rem -2rem 1rem -2rem; height: 220px !important; min-height: 220px; max-height: 220px; }
+      .cricket-teaser { margin-bottom: 1rem; height: 220px !important; min-height: 220px; max-height: 220px; }
     }
 
     .card-meta {
@@ -1063,7 +1067,7 @@
           <span class="skill-chip">Gaussian Models</span>
           <span class="skill-chip">State Machines</span>
           <span class="skill-chip">RAG / LLMs</span>
-          <span class="skill-chip">Reinforcement Learning</span>
+          <span class="skill-chip">Agentic AI</span>
           <span class="skill-chip">Signal Processing</span>
           <span class="skill-chip">HCI Research</span>
           <span class="skill-chip">Force Feedback / Haptics</span>
