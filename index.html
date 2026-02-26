@@ -215,6 +215,19 @@
       line-height: 1.15;
     }
 
+    .section-desc {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-desc a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .section-desc a:hover { text-decoration: underline; }
+
     /* ─── PROJECT GRID ────────────────────────── */
     .projects-grid {
       display: grid;
@@ -1007,10 +1020,10 @@
       <!-- PROJECT 4 — Sensci Cricket (Our Haptic Technology) -->
       <div class="project-card">
         <div class="cricket-teaser">
-          <img src="Website/Design1.png" alt="Sensci Cricket — design" class="cricket-teaser__slide cricket-teaser__slide--1" loading="lazy">
-          <img src="Website/Design2.png" alt="Sensci Cricket — development" class="cricket-teaser__slide cricket-teaser__slide--2" loading="lazy">
-          <img src="Website/IMG_0701.JPG" alt="Sensci Cricket — prototype" class="cricket-teaser__slide cricket-teaser__slide--3" loading="lazy">
-          <img src="Website/DSC00535-3.jpg" alt="Sensci Cricket — product" class="cricket-teaser__slide cricket-teaser__slide--4" loading="lazy">
+          <img src="Gallery/Design1.png" alt="Sensci Cricket — design" class="cricket-teaser__slide cricket-teaser__slide--1" loading="lazy">
+          <img src="Gallery/Design2.png" alt="Sensci Cricket — development" class="cricket-teaser__slide cricket-teaser__slide--2" loading="lazy">
+          <img src="Gallery/IMG_0701.JPG" alt="Sensci Cricket — prototype" class="cricket-teaser__slide cricket-teaser__slide--3" loading="lazy">
+          <img src="Gallery/DSC00535-3.jpg" alt="Sensci Cricket — product" class="cricket-teaser__slide cricket-teaser__slide--4" loading="lazy">
         </div>
         <p class="card-index">04 / 04</p>
         <div class="card-tags">
@@ -1032,9 +1045,65 @@
             <span class="meta-value">VAT · Relaxation · Accessible wellness</span>
           </div>
         </div>
-        <a class="card-link" href="Website/site/index.html">View Sensci Lab <i class="fa-solid fa-arrow-right"></i></a>
+        <a class="card-link" href="sensci/index.html">View Sensci Lab <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
+    </div>
+  </section>
+
+  <!-- ─── PUBLICATIONS ─────────────────────────── -->
+  <section id="publications">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Publications</h2>
+          <p class="section-desc">Research in HCI, haptics, and interactive systems. Full list and citation metrics on <a href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar <i class="fa-solid fa-external-link-alt" style="font-size:0.7em; opacity:0.8;"></i></a>.</p>
+        </div>
+      </div>
+      <div class="pub-list">
+        <a class="pub-item" href="https://dl.acm.org/doi/full/10.1145/3706599.3720173" target="_blank" rel="noopener">
+          <div class="pub-venue">CHI 2025 · Extended Abstracts</div>
+          <div class="pub-title">Feel the Connection: Haptic Enhanced Interaction with an AI Agent</div>
+          <div class="pub-authors">Kianzad, Li, Seifi</div>
+          <div class="pub-abstract">Introduces SenseiPen — an LLM haptic agent with voice + pen input, GPT-4V, responding with voice, visual cues, and force feedback. Lab study (n=16) showed force feedback improves engagement and intuitive AI interaction.</div>
+        </a>
+        <a class="pub-item" href="https://dl.acm.org/doi/abs/10.1145/3672539.3686753" target="_blank" rel="noopener">
+          <div class="pub-venue">UIST 2024 · ACM Symposium on UIST</div>
+          <div class="pub-title">MagicDraw: Haptic-Assisted One-Line Drawing with Shared Control</div>
+          <div class="pub-authors">Kianzad, Seifi</div>
+          <div class="pub-abstract">Force-feedback guided drawing with dynamic control sharing — users switch between assisted and freehand sketching. Concepts from text prompts; exploration regions allow creative deviation.</div>
+        </a>
+        <a class="pub-item" href="https://dl.acm.org/doi/abs/10.1145/3313831.3376134" target="_blank" rel="noopener">
+          <div class="pub-venue">CHI 2020</div>
+          <div class="pub-title">Phasking on Paper: Accessing a Continuum of Physically Assisted Sketching</div>
+          <div class="pub-authors">Kianzad et al.</div>
+          <div class="pub-abstract">Continuum of physically assisted sketching with haptic pen interaction.</div>
+        </a>
+        <a class="pub-item" href="https://ieeexplore.ieee.org/document/8357161" target="_blank" rel="noopener">
+          <div class="pub-venue">2018 IEEE Haptics Symposium (HAPTICS)</div>
+          <div class="pub-title">Harold's Purple Crayon Rendered in Haptics: Large-Stroke, Handheld Ballpoint Force Feedback</div>
+          <div class="pub-authors">Kianzad, MacLean</div>
+          <div class="pub-abstract">Large-stroke, handheld ballpoint force feedback for expressive haptic drawing and storytelling.</div>
+        </a>
+        <a class="pub-item" href="https://www.frontiersin.org/articles/10.3389/frobt.2021.612415/full" target="_blank" rel="noopener">
+          <div class="pub-venue">Frontiers in Robotics and AI, 2021</div>
+          <div class="pub-title">PAL: A Framework for Physically Assisted Learning Through Design and Exploration With a Haptic Robot Buddy</div>
+          <div class="pub-authors">Kianzad et al.</div>
+          <div class="pub-abstract">Framework for physically assisted learning with a haptic robot for design and exploration.</div>
+        </a>
+        <a class="pub-item" href="https://graphicsinterface.org/proceedings/2021/12/" target="_blank" rel="noopener">
+          <div class="pub-venue">Graphics Interface, 2021</div>
+          <div class="pub-title">Accountability-Aware Design of Voice User Interfaces for Home Appliances</div>
+          <div class="pub-authors">Kianzad et al.</div>
+          <div class="pub-abstract">Design considerations for accountable voice interfaces in home appliances.</div>
+        </a>
+        <a class="pub-item" href="https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0406179" target="_blank" rel="noopener">
+          <div class="pub-venue">University of British Columbia · Ph.D. Thesis, 2021</div>
+          <div class="pub-title">Magic Pen: A Versatile Digital Manipulative for Learning</div>
+          <div class="pub-authors">S. Kianzad</div>
+          <div class="pub-abstract">Versatile digital manipulative for learning with haptic feedback and sketch-based interaction.</div>
+        </a>
+      </div>
     </div>
   </section>
 
