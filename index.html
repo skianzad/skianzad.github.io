@@ -364,7 +364,7 @@
       border: none;
       object-fit: cover;
       object-position: top;
-      max-height: 260px;
+      max-height: 360px;
     }
 
     .courtready-visuals .courtready-img:first-child { border-radius: var(--radius) 0 0 0; }
@@ -375,6 +375,53 @@
       .courtready-visuals { grid-template-columns: 1fr; margin: -2rem -2rem 1rem -2rem; }
       .courtready-img { max-height: 220px; border-radius: 0 !important; }
       .courtready-visuals .courtready-img:first-child { border-radius: var(--radius) var(--radius) 0 0 !important; }
+    }
+
+    /* Sensci Cricket: one image at a time, cycling teaser (height matches CourtReady card) */
+    .cricket-teaser {
+      position: relative;
+      margin: -2rem -2rem 1.25rem -2rem;
+      border-radius: var(--radius) var(--radius) 0 0;
+      overflow: hidden;
+      width: 100%;
+      height: 360px !important;
+      min-height: 360px;
+      max-height: 360px;
+      aspect-ratio: auto;
+      background: var(--card-bg, #0f0f0f);
+    }
+    .cricket-teaser__slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+    }
+    .cricket-teaser__slide--1 { animation: cricket-teaser-1 16s ease-in-out infinite; }
+    .cricket-teaser__slide--2 { animation: cricket-teaser-2 16s ease-in-out infinite; }
+    .cricket-teaser__slide--3 { animation: cricket-teaser-3 16s ease-in-out infinite; }
+    .cricket-teaser__slide--4 { animation: cricket-teaser-4 16s ease-in-out infinite; }
+    @keyframes cricket-teaser-1 {
+      0%, 22% { opacity: 1; }
+      27%, 100% { opacity: 0; }
+    }
+    @keyframes cricket-teaser-2 {
+      0%, 22% { opacity: 0; }
+      27%, 47% { opacity: 1; }
+      52%, 100% { opacity: 0; }
+    }
+    @keyframes cricket-teaser-3 {
+      0%, 47% { opacity: 0; }
+      52%, 72% { opacity: 1; }
+      77%, 100% { opacity: 0; }
+    }
+    @keyframes cricket-teaser-4 {
+      0%, 72% { opacity: 0; }
+      77%, 100% { opacity: 1; }
+    }
+    @media (max-width: 640px) {
+      .cricket-teaser { margin: -2rem -2rem 1rem -2rem; height: 220px !important; min-height: 220px; max-height: 220px; }
     }
 
     .card-meta {
@@ -723,8 +770,9 @@
     @media (max-width: 900px) {
       .project-card.featured .card-visual .project-video,
       .project-card.featured .card-visual .project-hero-img {
-        min-height: 260px;
-        max-height: 50vh;
+        height: 360px;
+        min-height: 360px;
+        max-height: 360px;
       }
       .project-card.featured .card-body { padding: 1.5rem 1.5rem 2rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -792,7 +840,7 @@
           </video>
         </div>
         <div class="card-body">
-          <p class="card-index">01 / 03</p>
+          <p class="card-index">01 / 04</p>
           <div class="card-tags">
             <span class="tag">Human–Machine Interaction</span>
             <span class="tag">Applied ML</span>
@@ -877,7 +925,7 @@
           >
         </div>
         <div class="card-body">
-          <p class="card-index">03 / 03</p>
+          <p class="card-index">03 / 04</p>
           <div class="card-tags">
             <span class="tag">Haptic Robotics</span>
             <span class="tag">Embodied AI</span>
@@ -954,6 +1002,37 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <!-- PROJECT 4 — Sensci Cricket (Our Haptic Technology) -->
+      <div class="project-card">
+        <div class="cricket-teaser">
+          <img src="Website/Design1.png" alt="Sensci Cricket — design" class="cricket-teaser__slide cricket-teaser__slide--1" loading="lazy">
+          <img src="Website/Design2.png" alt="Sensci Cricket — development" class="cricket-teaser__slide cricket-teaser__slide--2" loading="lazy">
+          <img src="Website/IMG_0701.JPG" alt="Sensci Cricket — prototype" class="cricket-teaser__slide cricket-teaser__slide--3" loading="lazy">
+          <img src="Website/DSC00535-3.jpg" alt="Sensci Cricket — product" class="cricket-teaser__slide cricket-teaser__slide--4" loading="lazy">
+        </div>
+        <p class="card-index">04 / 04</p>
+        <div class="card-tags">
+          <span class="tag">Vibroacoustic Therapy</span>
+          <span class="tag">Wellness</span>
+          <span class="tag">SensciLab</span>
+        </div>
+        <h3 class="card-title">Our Haptic Technology</h3>
+        <p class="card-desc">
+          State-of-the-art haptic science for <strong style="color:var(--text)">vibroacoustic therapy</strong> that reconnects you with the <strong style="color:var(--text)">healing power of natural vibrations</strong>. From SensciLab, Cricket is engineered to create natural acoustic vibrations reminiscent of Tibetan singing bowls and gentle cricket symphonies — for relaxation, focus, and accessible wellness at home or in practice.
+        </p>
+        <div class="card-meta">
+          <div class="meta-row">
+            <span class="meta-label">Company</span>
+            <span class="meta-value">SensciLab — Founder</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Focus</span>
+            <span class="meta-value">VAT · Relaxation · Accessible wellness</span>
+          </div>
+        </div>
+        <a class="card-link" href="Website/site/index.html">View Sensci Lab <i class="fa-solid fa-arrow-right"></i></a>
       </div>
 
     </div>
