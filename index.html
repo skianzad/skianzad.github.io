@@ -824,13 +824,15 @@
       .project-card.featured .card-body { padding: 1.5rem 1.5rem 2rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .nav-links { display: none; }
-      nav.nav--open .nav-links { display: flex; flex-direction: column; gap: 0; width: 100%; padding: 1rem 0 0.5rem; border-top: 1px solid var(--border); margin-top: 0.5rem; }
+      .nav-inner { flex-wrap: wrap; }
+      .nav-links { order: 3; flex-basis: 100%; }
+      nav.nav--open .nav-links { display: flex; flex-direction: column; gap: 0; align-items: stretch; text-align: left; padding: 1rem 0 0.5rem; border-top: 1px solid var(--border); margin-top: 0.5rem; }
       nav.nav--open .nav-links li { width: 100%; }
       nav.nav--open .nav-links a { display: block; padding: 14px 0; font-size: 0.9375rem; border-bottom: 1px solid var(--border); }
       nav.nav--open .nav-links a:last-child { border-bottom: 0; }
-      .nav-toggle { display: flex; }
+      .nav-toggle { display: flex; order: 2; }
+      .nav-brand { order: 1; }
       nav.nav--open .nav-toggle::before { content: 'Close'; }
-      .nav-inner { flex-wrap: wrap; }
     }
     @media (max-width: 640px) {
       nav { padding: 0 1rem; }

@@ -30,6 +30,17 @@
     .nav-links a { font-size: 0.875rem; color: var(--muted); transition: color var(--transition); }
     .nav-links a:hover { color: var(--text); }
     .nav-links a.active { color: var(--text); font-weight: 500; }
+    .nav-toggle {
+      display: none;
+      align-items: center; justify-content: center;
+      width: 44px; height: 44px; padding: 0;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem; font-weight: 600; color: var(--text);
+      cursor: pointer; -webkit-tap-highlight-color: transparent;
+    }
+    .nav-toggle:hover { background: var(--surface2); }
+    .nav-toggle::before { content: 'Menu'; }
     .section-inner { max-width: 1040px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
     .contact-box {
       background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
@@ -62,14 +73,26 @@
       transition: color var(--transition), border-color var(--transition);
     }
     .footer-icons a:hover { color: var(--text); }
-    @media (max-width: 900px) { .nav-links { display: none; } }
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .nav-inner { flex-wrap: wrap; }
+      .nav-links { order: 3; flex-basis: 100%; }
+      nav.nav--open .nav-links { display: flex; flex-direction: column; gap: 0; align-items: stretch; text-align: left; padding: 1rem 0 0.5rem; border-top: 1px solid var(--border); margin-top: 0.5rem; }
+      nav.nav--open .nav-links li { width: 100%; }
+      nav.nav--open .nav-links a { display: block; padding: 14px 0; font-size: 0.9375rem; border-bottom: 1px solid var(--border); }
+      nav.nav--open .nav-links a:last-child { border-bottom: 0; }
+      .nav-toggle { display: flex; order: 2; }
+      .nav-brand { order: 1; }
+      nav.nav--open .nav-toggle::before { content: 'Close'; }
+    }
     @media (max-width: 600px) { .contact-box { padding: 2rem 1.5rem; } }
   </style>
 </head>
 <body>
-  <nav>
+  <nav id="main-nav">
     <div class="nav-inner">
       <a class="nav-brand" href="index.html">Soheil&nbsp;Kianzad</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('main-nav').classList.toggle('nav--open')"></button>
       <ul class="nav-links">
         <li><a href="index.html#projects">Projects</a></li>
         <li><a href="publications.html">Publications</a></li>
