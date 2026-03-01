@@ -33,7 +33,7 @@
       --transition: 0.2s ease;
     }
 
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; overflow-x: hidden; }
 
     body {
       background: var(--bg);
@@ -42,6 +42,7 @@
       font-size: 15px;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -93,6 +94,26 @@
     }
 
     .nav-links a:hover { color: var(--text); }
+
+    .nav-toggle {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      padding: 0;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .nav-toggle:hover { background: var(--surface2); }
+    .nav-toggle::before { content: 'Menu'; }
 
     /* ─── HERO ────────────────────────────────── */
     .hero {
@@ -177,12 +198,21 @@
       color: var(--accent2);
       transform: translateY(-2px);
     }
+    @media (max-width: 640px) {
+      .btn { min-height: 44px; padding: 12px 20px; font-size: 0.875rem; }
+    }
 
     /* previously hero stats strip – removed per design preference */
 
     /* ─── SECTION ─────────────────────────────── */
     section {
       padding: 4.5rem 1.5rem 5rem;
+    }
+    @media (max-width: 640px) {
+      section { padding: 3rem 1rem 4rem; }
+      .section-inner { padding: 0 1rem; }
+      .section-header { margin-bottom: 2rem; }
+      .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
     }
 
     .section-inner {
@@ -794,20 +824,49 @@
       .project-card.featured .card-body { padding: 1.5rem 1.5rem 2rem; }
       .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
       .nav-links { display: none; }
+      nav.nav--open .nav-links { display: flex; flex-direction: column; gap: 0; width: 100%; padding: 1rem 0 0.5rem; border-top: 1px solid var(--border); margin-top: 0.5rem; }
+      nav.nav--open .nav-links li { width: 100%; }
+      nav.nav--open .nav-links a { display: block; padding: 14px 0; font-size: 0.9375rem; border-bottom: 1px solid var(--border); }
+      nav.nav--open .nav-links a:last-child { border-bottom: 0; }
+      .nav-toggle { display: flex; }
+      nav.nav--open .nav-toggle::before { content: 'Close'; }
+      .nav-inner { flex-wrap: wrap; }
     }
-
+    @media (max-width: 640px) {
+      nav { padding: 0 1rem; }
+      .hero { padding: 5rem 1rem 3rem; min-height: 85vh; }
+      .hero h1 { font-size: clamp(1.75rem, 8vw, 2.5rem); margin-bottom: 1rem; }
+      .hero-subtitle { font-size: 0.9375rem; margin-bottom: 1.5rem; }
+      .hero-cta { gap: 0.75rem; }
+      .projects-grid { gap: 1.25rem; }
+      .project-card { padding: 1.5rem 1.25rem 1.5rem; }
+      .project-card.featured .card-body { padding: 1.25rem 1.25rem 1.75rem; }
+      .card-title { font-size: 1.2rem; }
+      .card-desc { font-size: 0.875rem; }
+      .card-meta, .meta-row { font-size: 0.75rem; }
+      .contact-box { padding: 1.75rem 1rem; }
+      .contact-links { flex-direction: column; }
+      .contact-links .btn { width: 100%; justify-content: center; }
+      footer { padding: 1.5rem 1rem; gap: 0.75rem; }
+      .footer-icons a { width: 40px; height: 40px; }
+    }
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.4rem; }
       .contact-box { padding: 2rem 1.5rem; }
+    }
+    @media (max-width: 480px) {
+      .hero { padding: 4.5rem 0.75rem 2.5rem; min-height: 80vh; }
+      .hero-eyebrow { font-size: 0.7rem; }
     }
   </style>
 </head>
 <body>
 
   <!-- ─── NAV ─────────────────────────────────── -->
-  <nav>
+  <nav id="main-nav">
     <div class="nav-inner">
       <a class="nav-brand" href="#top">Soheil&nbsp;Kianzad</a>
+      <button type="button" class="nav-toggle" aria-label="Toggle menu" onclick="document.getElementById('main-nav').classList.toggle('nav--open')"></button>
       <ul class="nav-links">
         <li><a href="#projects">Projects</a></li>
         <li><a href="publications.html">Publications</a></li>
