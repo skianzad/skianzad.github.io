@@ -113,6 +113,30 @@
     }
     .courtready-visuals .courtready-img:first-child { border-radius: var(--radius) 0 0 0; }
     .courtready-visuals .courtready-img:last-child { border-radius: 0 var(--radius) 0 0; }
+    .research-visuals {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin: -2rem -2rem 1.25rem -2rem;
+      padding: 0.75rem;
+      background: var(--surface2);
+      border-radius: var(--radius) var(--radius) 0 0;
+      overflow: hidden;
+    }
+    .research-visual {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      background: #fff;
+      border: 1px solid var(--border);
+      object-fit: contain;
+      max-height: 240px;
+    }
+    .research-visual--hero {
+      grid-column: 1 / -1;
+      max-height: 280px;
+    }
     .card-meta {
       display: flex; flex-direction: column; gap: 0.6rem;
       padding-top: 1.25rem; border-top: 1px solid var(--border);
@@ -180,6 +204,8 @@
     @media (max-width: 640px) {
       .courtready-visuals { grid-template-columns: 1fr; margin: -2rem -2rem 1rem -2rem; }
       .courtready-img { max-height: 220px; }
+      .research-visuals { grid-template-columns: 1fr; margin: -2rem -2rem 1rem -2rem; }
+      .research-visual, .research-visual--hero { max-height: 220px; }
       .project-card { padding: 1.5rem 1.25rem 1.5rem; }
       .project-card.featured .card-body { padding: 1.25rem 1.25rem 1.75rem; }
       .project-card.featured .card-visual .project-video {
@@ -212,6 +238,26 @@
       <div class="projects-grid">
 
         <div class="project-card research">
+          <div class="research-visuals">
+            <img
+              src="Gallery/artificial-muscle-mechanism.png"
+              alt="Thermally activated coiled polymer actuator — heating contracts, cooling extends"
+              class="research-visual research-visual--hero"
+              loading="lazy"
+            >
+            <img
+              src="Gallery/artificial-muscle-sem.png"
+              alt="SEM micrograph of twisted nylon fiber artificial muscle"
+              class="research-visual"
+              loading="lazy"
+            >
+            <img
+              src="Gallery/artificial-muscle-model.png"
+              alt="Geometric model of twisted and coiled fiber actuator cross-section and helix"
+              class="research-visual"
+              loading="lazy"
+            >
+          </div>
           <div class="card-tags">
             <span class="tag">Artificial Muscle</span>
             <span class="tag">Smart Actuators</span>
