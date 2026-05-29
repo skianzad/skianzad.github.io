@@ -133,6 +133,24 @@
     .card-link:hover { gap: 0.75rem; }
     .card-link i { font-size: 0.75rem; transition: transform var(--transition); }
     .card-link:hover i { transform: translateX(3px); }
+    .pub-list { margin-top: 1.25rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .pub-list-label {
+      font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--muted); margin-bottom: 0.25rem;
+    }
+    .pub-item {
+      display: block; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1rem 1.1rem;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .pub-item:hover { border-color: rgba(185,28,28,0.25); background: rgba(185,28,28,0.04); }
+    .pub-venue {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem;
+      color: var(--accent2); letter-spacing: 0.06em; margin-bottom: 0.3rem;
+    }
+    .pub-title { font-size: 0.88rem; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 0.25rem; }
+    .pub-authors { font-size: 0.75rem; color: var(--muted); }
+    .project-card.research { grid-column: 1 / -1; }
     footer {
       padding: 2rem clamp(1.5rem, 5vw, 4rem); border-top: 1px solid var(--border);
       display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
@@ -189,7 +207,7 @@
   <main>
     <div class="section-inner">
       <h1 class="page-title">Projects</h1>
-      <p class="page-sub">Research and engineering work shipped in consumer hardware, civic tech, and large-scale input systems — from early concepts to production-ready solutions.</p>
+      <p class="page-sub">Shipped products and research — consumer hardware, civic tech, artificial muscle, haptic collaboration, and input systems from early concepts to production.</p>
 
       <div class="projects-grid">
 
@@ -240,6 +258,29 @@
                 <span class="meta-value">#1 rated feature · NSS 70 · +20% typing speed</span>
               </div>
             </div>
+            <div class="pub-list">
+              <p class="pub-list-label">Related patents</p>
+              <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+                <div class="pub-venue">2026 · US Patent App. 19/407,092</div>
+                <div class="pub-title">Methods and systems for multimodal dragging interactions with virtual objects</div>
+                <div class="pub-authors">R Mohi, C Yan, S Kianzad, W Li</div>
+              </a>
+              <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+                <div class="pub-venue">2025 · US Patent App. 18/537,027</div>
+                <div class="pub-title">Methods and systems for a user-adaptive virtual keyboard</div>
+                <div class="pub-authors">W Li, C Yan, S Lu, S Kianzad</div>
+              </a>
+              <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+                <div class="pub-venue">2024 · Patent</div>
+                <div class="pub-title">Methods and systems for pressure-assisted interaction with a touch sensitive input device</div>
+                <div class="pub-authors">S Kianzad, C Yan, J Henderson, W Li</div>
+              </a>
+              <a class="pub-item" href="https://patents.google.com/patent/US20240212674A1" target="_blank" rel="noopener">
+                <div class="pub-venue">2023 · US20240212674A1</div>
+                <div class="pub-title">System, method and device for multimodal text editing</div>
+                <div class="pub-authors">W Li, C Yan, S Kianzad, H Jay</div>
+              </a>
+            </div>
             <a class="card-link" href="https://consumer.huawei.com/cn/harmonyos-computer/matebook-fold-ultimate-design/" target="_blank" rel="noopener">Case study <i class="fa-solid fa-arrow-right"></i></a>
           </div>
         </div>
@@ -278,6 +319,147 @@
             </div>
           </div>
           <a class="card-link" href="https://courtready.ca" target="_blank" rel="noopener">Visit CourtReady.ca <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="project-card research">
+          <div class="card-tags">
+            <span class="tag">Artificial Muscle</span>
+            <span class="tag">Smart Actuators</span>
+            <span class="tag">Mechatronics</span>
+          </div>
+          <h3 class="card-title">Coiled Nylon Actuators &amp; Artificial Muscle</h3>
+          <p class="card-desc">
+            M.Sc. research at UBC Molecular Mechatronics Lab on thermally driven shape memory alloy yarn and coiled nylon actuators — variable stiffness, pennate muscle configurations, operating temperature ranges, and cooling strategies for high-performance artificial muscle systems.
+          </p>
+          <div class="pub-list">
+            <p class="pub-list-label">Publications &amp; thesis</p>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">IEEE Pulse · 2015</div>
+              <div class="pub-title">Twisted lines: Artificial muscle and advanced instruments can be formed from nylon threads and fabric</div>
+              <div class="pub-authors">JDW Madden, S Kianzad</div>
+            </a>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">Proc. SPIE · 2015</div>
+              <div class="pub-title">Variable stiffness and recruitment using nylon actuators arranged in a pennate configuration</div>
+              <div class="pub-authors">S Kianzad, M Pandit, JD Lewis, AR Berlingeri, KJ Haebler, JDW Madden</div>
+            </a>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">EAPAD · 2015</div>
+              <div class="pub-title">Nylon coil actuator operating temperature range and stiffness</div>
+              <div class="pub-authors">S Kianzad, M Pandit, A Bahi, A Rafiee, F Ko, GM Spinks, JDW Madden</div>
+            </a>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">EAPAD · 2022</div>
+              <div class="pub-title">Active cooling techniques for coiled nylon actuators</div>
+              <div class="pub-authors">S Dhillon, S Kianzad, M Pandit, M Farajollahi, J Madden</div>
+            </a>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">EAPAD · 2022</div>
+              <div class="pub-title">Combined hydrogel and elastomer coatings for cooling supercoiled nylon actuators</div>
+              <div class="pub-authors">S Dhillon, AR Muljiani, H Tran, S Kianzad, JDW Madden</div>
+            </a>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">UBC · M.Sc. Thesis · 2015</div>
+              <div class="pub-title">A treatise on highly twisted artificial muscle: thermally driven shape memory alloy yarn and coiled nylon actuators</div>
+              <div class="pub-authors">S Kianzad</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card research">
+          <div class="card-tags">
+            <span class="tag">Surgical Robotics</span>
+            <span class="tag">Control Engineering</span>
+            <span class="tag">Biomedical</span>
+          </div>
+          <h3 class="card-title">Laparoscopic Force Control Instruments</h3>
+          <p class="card-desc">
+            Early work on intelligent laparoscopic graspers and forceps with antagonistic shape memory alloy actuation — force-controlled surgical instruments for minimally invasive procedures.
+          </p>
+          <div class="pub-list">
+            <p class="pub-list-label">Publications</p>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">MECBME · 2011</div>
+              <div class="pub-title">Force control of laparoscopy grasper using antagonistic shape memory alloy</div>
+              <div class="pub-authors">S Kianzad, A Amini, SO Karkouti</div>
+            </a>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">J. Medical Imaging and Health Informatics · 2011</div>
+              <div class="pub-title">Force control of intelligent laparoscopic forceps</div>
+              <div class="pub-authors">S Kianzad, SO Karkouti, HD Taghirad</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card research">
+          <div class="card-tags">
+            <span class="tag">Haptics</span>
+            <span class="tag">Human–Robot Interaction</span>
+            <span class="tag">Learning</span>
+          </div>
+          <h3 class="card-title">Haptic Collaboration &amp; Physically Assisted Learning</h3>
+          <p class="card-desc">
+            Research on robot-mediated haptic collaboration, shared-force workspaces, and frameworks for physically assisted learning — exploring how touch and shared control support education and creative work before commercial MagicPen development.
+          </p>
+          <div class="pub-list">
+            <p class="pub-list-label">Publications</p>
+            <a class="pub-item" href="https://ieeexplore.ieee.org/document/9223662" target="_blank" rel="noopener">
+              <div class="pub-venue">RO-MAN · 2020</div>
+              <div class="pub-title">Allohaptic: Robot-mediated haptic collaboration for learning linear functions</div>
+              <div class="pub-authors">H Khodr, S Kianzad, W Johal, A Kothiyal, B Bruno, P Dillenbourg</div>
+            </a>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">AsiaHaptics · 2018</div>
+              <div class="pub-title">Collaborating through magic pens: Grounded forces in large, overlappable workspaces</div>
+              <div class="pub-authors">S Kianzad, KE MacLean</div>
+            </a>
+            <a class="pub-item" href="https://www.frontiersin.org/articles/10.3389/frobt.2021.612415/full" target="_blank" rel="noopener">
+              <div class="pub-venue">Frontiers in Robotics and AI · 2021</div>
+              <div class="pub-title">PAL: A framework for physically assisted learning through design and exploration with a haptic robot buddy</div>
+              <div class="pub-authors">S Kianzad, G Chen, KE MacLean</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card research">
+          <div class="card-tags">
+            <span class="tag">HCI</span>
+            <span class="tag">Voice UI</span>
+            <span class="tag">Design</span>
+          </div>
+          <h3 class="card-title">Accountability-Aware Voice User Interfaces</h3>
+          <p class="card-desc">
+            Design research on voice interfaces for home appliances — making system behavior, errors, and agency legible to users in everyday smart-home contexts.
+          </p>
+          <div class="pub-list">
+            <p class="pub-list-label">Publications</p>
+            <a class="pub-item" href="https://graphicsinterface.org/proceedings/2021/12/" target="_blank" rel="noopener">
+              <div class="pub-venue">Graphics Interface · 2021</div>
+              <div class="pub-title">Accountability-Aware Design of Voice User Interfaces for Home Appliances</div>
+              <div class="pub-authors">S Kianzad, Y Kim, JAB Lindsay, Y Huang, JB Benavides, R Leung, et al.</div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card research">
+          <div class="card-tags">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Privacy</span>
+            <span class="tag">Healthcare</span>
+          </div>
+          <h3 class="card-title">Distributed Learning on Private Medical Data</h3>
+          <p class="card-desc">
+            Scalable, fault-tolerant platform for distributed machine learning on private medical imaging data — enabling collaborative model training without centralizing sensitive patient records.
+          </p>
+          <div class="pub-list">
+            <p class="pub-list-label">Publications</p>
+            <a class="pub-item" href="https://scholar.google.com/citations?user=VmXzPpIAAAAJ&hl=en" target="_blank" rel="noopener">
+              <div class="pub-venue">MLMI Workshop · 2017</div>
+              <div class="pub-title">Scalable and fault tolerant platform for distributed learning on private medical data</div>
+              <div class="pub-authors">A Amir-Khalili, S Kianzad, R Abugharbieh, I Beschastnikh</div>
+            </a>
+          </div>
+          <a class="card-link" href="publications.html">All publications <i class="fa-solid fa-arrow-right"></i></a>
         </div>
 
       </div>
