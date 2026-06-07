@@ -898,7 +898,7 @@
     <p class="hero-eyebrow">Ph.D. · HCI · Applied ML · Product</p>
     <h1>Building the<br>interface between<br><span class="highlight">humans and machines.</span></h1>
     <p class="hero-subtitle">
-      I ship product and design across hardware, civic tech, and embodied AI — Huawei (MateBook Fold input), CourtReady &amp; CaseCheck (legal tools &amp; Academy), SensciLab (MagicPen &amp; Cricket). From research to shipped experience.
+      I design agentic pen and AI experiences for knowledge work, and ship hardware and software across foldable PCs, civic tech, and embodied learning — Huawei (MateBook Fold input), CourtReady &amp; CaseCheck, SensciLab (MagicPen, Brushi &amp; Cricket).
     </p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#products"><i class="fa-solid fa-layer-group"></i> See products</a>
@@ -942,14 +942,10 @@
           <h3 class="card-title">Advanced Virtual Keyboard &amp; Trackpad for Foldable PCs</h3>
           <p class="card-desc">
             Led research, design, and system validation of Huawei's first production <strong style="color:var(--text)">virtual keyboard + trackpad</strong>
-            for the <strong style="color:var(--text)">MateBook Fold 非凡大师 (Ultimate Design)</strong>, an 18&quot; HarmonyOS foldable PC that can switch between
-            a full-screen canvas and a laptop mode with on-display keyboard and trackpad.<br><br>
-            When folded, a light touch of eight fingers brings up the virtual keyboard so you can type ideas at any time.
-            Multiple skins are available, and key spacing and layout are adjustable for a personalized yet efficient typing
-            experience; the built-in linear motor provides a natural and realistic typing feel.<br><br>
-            Under the hood, I developed the sensing and modeling stack for this experience: Gaussian touch‑offset models plus
-            language models to speed up blind typing on the flexible surface, multimodal state machines to keep pointing
-            precise, and deep learning models that suppress accidental touches and palm contacts.
+            for the <strong style="color:var(--text)">MateBook Fold 非凡大师 (Ultimate Design)</strong>, an 18&quot; HarmonyOS foldable PC.<br><br>
+            <strong style="color:var(--text)">Key challenges:</strong> accidental touch, lack of haptic feedback, slow typing (20–30 WPM), ergonomic strain, and fatigue on long sessions.<br><br>
+            <strong style="color:var(--text)">Our solutions:</strong> resting-hand &amp; palm rejection, haptic confirmation for key presses and boundaries, and an adaptive Gaussian model that learns individual typing patterns in real time.<br><br>
+            Under the hood: Gaussian touch‑offset models, language models for blind typing, multimodal state machines for precise pointing, and deep learning for accidental-touch suppression — with haptic, audio, and visual feedback for natural typing.
           </p>
           <div class="card-meta">
             <div class="meta-row">
@@ -962,7 +958,7 @@
             </div>
             <div class="meta-row">
               <span class="meta-label">Impact</span>
-              <span class="meta-value">#1 rated feature · NSS 70 · +20% typing speed</span>
+              <span class="meta-value">NSS 49.3% (from −55%) · +15% typing efficiency · 5+ patents</span>
             </div>
           </div>
           <div class="pub-list">
@@ -1013,28 +1009,33 @@
             Co-founded <strong style="color:var(--text)">SensciLab</strong> and led R&amp;D of MagicPen —
             the <strong style="color:var(--text)">only device delivering force feedback on a tablet</strong>,
             designed to transform learning from kindergarten through university.<br><br>
+            <strong style="color:var(--text)">Agentic pen + AI for knowledge work:</strong> write and annotate naturally, use gestures (lasso, swipe, pinch), ask questions by voice, and let the agent interpret intent, act in Excel or PowerPoint, and return results for you to confirm or refine.<br><br>
             Engineered a multimodal system with <strong style="color:var(--text)">2.5D force feedback</strong>,
-            vibrotactile output, voice + gesture input (mic + accelerometer), and emotive eyes —
-            built on Apple Pencil / iPad to eliminate extra hardware cost.
-            Grounded in constructionist theory (Papert): guides learners from handwriting to
-            university-level ML/AI development.
+            vibrotactile output, voice + gesture input, and emotive eyes — built on Apple Pencil / iPad.
           </p>
 
           <div class="pub-list">
-            <p class="pub-list-label">Publications</p>
+            <p class="pub-list-label">Publications &amp; products</p>
 
-            <a class="pub-item" href="https://dl.acm.org/doi/full/10.1145/3706599.3720173" target="_blank">
-              <div class="pub-venue">CHI 2025 · Extended Abstracts</div>
+            <a class="pub-item" href="https://dl.acm.org/doi/full/10.1145/3706599.3720173" target="_blank" rel="noopener">
+              <div class="pub-venue">CHI 2025 · Extended Abstracts · SenseiPen</div>
               <div class="pub-title">Feel the Connection: Haptic Enhanced Interaction with an AI Agent</div>
               <div class="pub-authors">Kianzad, Li, Seifi</div>
-              <div class="pub-abstract">Introduces SenseiPen — an LLM haptic agent taking voice + pen input on a tablet, powered by GPT-4V, responding with voice, visual cues, and force feedback. Lab study (n=16) showed force feedback improves user engagement and intuitive AI interaction.</div>
+              <div class="pub-abstract">Ask with voice. Point with pen. Get answers with haptics and visuals — an AI agent for knowledge work powered by GPT-4V.</div>
             </a>
 
-            <a class="pub-item" href="https://dl.acm.org/doi/abs/10.1145/3672539.3686753" target="_blank">
-              <div class="pub-venue">UIST 2024 · ACM Symposium on UIST</div>
+            <a class="pub-item" href="https://dl.acm.org/doi/abs/10.1145/3672539.3686753" target="_blank" rel="noopener">
+              <div class="pub-venue">UIST 2024 · MagicDraw</div>
               <div class="pub-title">MagicDraw: Haptic-Assisted One-Line Drawing with Shared Control</div>
               <div class="pub-authors">Kianzad, Seifi</div>
-              <div class="pub-abstract">Force-feedback guided drawing platform with dynamic control sharing — users seamlessly switch between fully assisted and freehand sketching. Concepts generated from text prompts; exploration regions allow creative deviation while maintaining structured guidance.</div>
+              <div class="pub-abstract">One-line drawing with haptic guidance and creative freedom. Navigation speed 37.89 mm/s; 86.25% of trials under 4 mm error; reward score significantly improved (p &lt; .05).</div>
+            </a>
+
+            <a class="pub-item" href="https://senscilab.com/brushi" target="_blank" rel="noopener">
+              <div class="pub-venue">SensciLab · Brushi</div>
+              <div class="pub-title">Brushi — Creative Learning Companion</div>
+              <div class="pub-authors">SensciLab</div>
+              <div class="pub-abstract">AI drawing companion that encourages creativity and self-expression — built for classrooms, homes, and everywhere kids learn through art.</div>
             </a>
 
             <a class="pub-item" href="https://dl.acm.org/doi/abs/10.1145/3313831.3376134" target="_blank">
